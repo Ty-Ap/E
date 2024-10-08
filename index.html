@@ -20,6 +20,7 @@
             position: fixed;
             width: 100%;
             box-sizing: border-box;
+            z-index: 1000;
         }
         .header a {
             color: #e0d0b0;
@@ -45,7 +46,7 @@
             text-align: center;
         }
         .content {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 50px auto;
             padding: 0 20px;
         }
@@ -76,39 +77,6 @@
             border-left: 30px solid #1a2a2a;
             margin-left: 7px;
         }
-    </style>
-</head>
-<body>
-    <header class="header">
-        <a href="#about">ABOUT</a>
-        <a href="#membership">MEMBERSHIP</a>
-        <a href="#shop">SHOP</a>
-        <a href="#account">👤</a>
-        <a href="#cart">🛒</a>
-    </header>
-
-    <section class="hero">
-        <div class="logo">⦾</div>
-        <h1 class="tagline">evoke</h1>
-    </section>
-
-    <section class="content">
-        <h2>A Connection Between Personal Wellbeing and Creative Community</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <div class="video-placeholder">
-            <div class="play-button" onclick="playVideo()"></div>
-        </div>
-    </section>
-
-    <script>
-        function playVideo() {
-            alert('Video playback would start here.');
-        }
-      .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
         .card {
             background-color: #ffffff;
             border-radius: 10px;
@@ -134,11 +102,11 @@
             padding: 20px;
             color: #333;
         }
-        h2 {
+        .card h2 {
             margin-top: 0;
             color: #1a2a2a;
         }
-        .logo {
+        .logo-small {
             width: 50px;
             height: 50px;
             margin-bottom: 10px;
@@ -146,46 +114,28 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <header class="header">
+        <a href="#about">ABOUT</a>
+        <a href="#membership">MEMBERSHIP</a>
+        <a href="#shop">SHOP</a>
+        <a href="#account">👤</a>
+        <a href="#cart">🛒</a>
+    </header>
+
+    <section class="hero">
+        <div class="logo">⦾</div>
+        <h1 class="tagline">evoke</h1>
+    </section>
+
+    <div class="content">
+        <h2>A Connection Between Personal Wellbeing and Creative Community</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <div class="video-placeholder">
+            <div class="play-button" onclick="playVideo()"></div>
+        </div>
+
         <div class="card">
             <div class="card-image" style="background-image: url('https://source.unsplash.com/random/800x600?psychedelic')"></div>
             <div class="card-content">
                 <h2>Education and Growth</h2>
-                <p>Education is the cornerstone of personal and societal growth. evōke is committed to advocating for expanded access to sacred earth medicines and their derivatives. These natural compounds have been used for millennia to bring about profound insights and healing. Through workshops, seminars, and community discussions, we explore how these medicines can enhance personal authenticity and, by extension, contribute to a more genuine and compassionate world. Our educational initiatives aim to dispel misconceptions, promote responsible use, and illuminate the potential of these powerful tools for personal and collective transformation.</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-content">
-                <img src="https://source.unsplash.com/random/50x50?leaf" alt="Sacred Logo" class="logo">
-                <h2>SACRED</h2>
-                <p>At the heart of our philosophy lies the belief that connection with sacred earth medicines is an inalienable right. These natural compounds, bestowed upon us by our creator, offer pathways to deeper understanding and expanded consciousness. We recognize that true healing and growth often require us to confront challenging aspects of ourselves and our world. Through carefully guided experiences and integration practices, we support individuals in their journey towards self-discovery and holistic wellbeing.</p>
-            </div>
-            <div class="card-image" style="background-image: url('https://source.unsplash.com/random/800x600?cosmos')"></div>
-        </div>
-    </div>
-
-    <script>
-        function isElementInViewport(el) {
-            var rect = el.getBoundingClientRect();
-            return (
-                rect.top >= 0 &&
-                rect.left >= 0 &&
-                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-            );
-        }
-
-        function handleScroll() {
-            var cards = document.querySelectorAll('.card');
-            cards.forEach(function(card) {
-                if (isElementInViewport(card)) {
-                    card.classList.add('visible');
-                }
-            });
-        }
-
-        window.addEventListener('scroll', handleScroll);
-        window.addEventListener('load', handleScroll);
-    </script>
-</body>
-</html>
+                <p>Education is the cornerstone of personal and societal growth. evōke is committed to advocating for expanded access to sacred earth medicines and their derivatives. These natural compounds have been used for millennia to bring about profound insights and healing. Through 
