@@ -29,7 +29,7 @@
         }
         .hero {
             height: 100vh;
-            background-image: url('https://source.unsplash.com/random/1600x900/?forest,river');
+            background-image: url('https://picsum.photos/1600/900');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -135,7 +135,73 @@
         </div>
 
         <div class="card">
-            <div class="card-image" style="background-image: url('https://source.unsplash.com/random/800x600?psychedelic')"></div>
+            <div class="card-image" style="background-image: url('https://picsum.photos/800/600?random=1')"></div>
             <div class="card-content">
                 <h2>Education and Growth</h2>
-                <p>Education is the cornerstone of personal and societal growth. evōke is committed to advocating for expanded access to sacred earth medicines and their derivatives. These natural compounds have been used for millennia to bring about profound insights and healing. Through 
+                <p>Education is the cornerstone of personal and societal growth. evōke is committed to advocating for expanded access to sacred earth medicines and their derivatives. These natural compounds have been used for millennia to bring about profound insights and healing. Through workshops, seminars, and community discussions, we explore how these medicines can enhance personal authenticity and, by extension, contribute to a more genuine and compassionate world. Our educational initiatives aim to dispel misconceptions, promote responsible use, and illuminate the potential of these powerful tools for personal and collective transformation.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <img src="https://picsum.photos/50/50?random=2" alt="Sacred Logo" class="logo-small">
+                <h2>SACRED</h2>
+                <p>At the heart of our philosophy lies the belief that connection with sacred earth medicines is an inalienable right. These natural compounds, bestowed upon us by our creator, offer pathways to deeper understanding and expanded consciousness. We recognize that true healing and growth often require us to confront challenging aspects of ourselves and our world. Through carefully guided experiences and integration practices, we support individuals in their journey towards self-discovery and holistic wellbeing.</p>
+            </div>
+            <div class="card-image" style="background-image: url('https://picsum.photos/800/600?random=3')"></div>
+        </div>
+
+        <div class="card">
+            <div class="card-image" style="background-image: url('https://picsum.photos/800/600?random=4')"></div>
+            <div class="card-content">
+                <h2>Community and Connection</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h2>Holistic Wellbeing</h2>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Donec elementum ligula eu sapien consequat eleifend. Donec nec dolor erat, condimentum sagittis sem. Praesent porttitor porttitor risus, dapibus rutrum ipsum gravida et. Integer lectus nisi, facilisis sit amet eleifend nec, pharetra ut augue. Integer quam nunc, consequat nec egestas ac, volutpat ac nisi. Sed consectetur dignissim dignissim. Donec pretium est sit amet ipsum fringilla feugiat. Aliquam erat volutpat. Maecenas scelerisque, orci sit amet cursus tincidunt, libero nisl eleifend tortor, vitae cursus risus mauris vitae nisi. Cras laoreet ultrices ligula eget tempus.</p>
+            </div>
+            <div class="card-image" style="background-image: url('https://picsum.photos/800/600?random=5')"></div>
+        </div>
+
+        <div class="card">
+            <div class="card-image" style="background-image: url('https://picsum.photos/800/600?random=6')"></div>
+            <div class="card-content">
+                <h2>Sustainable Practices</h2>
+                <p>Vivamus fermentum semper porta. Nunc diam velit, adipiscing ut tristique vitae, sagittis vel odio. Maecenas convallis ullamcorper ultricies. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, id fringilla sem nunc vel mi. Nam dictum, odio nec pretium volutpat, arcu ante placerat erat, non tristique elit urna et turpis. Quisque mi metus, ornare sit amet fermentum et, tincidunt et orci. Fusce eget orci a orci congue vestibulum. Ut dolor diam, elementum et vestibulum eu, porttitor vel elit. Curabitur venenatis pulvinar tellus gravida ornare. Sed et erat faucibus nunc euismod ultricies ut id justo. Nullam cursus suscipit nisi, et ultrices justo sodales nec. Fusce venenatis facilisis lectus ac semper. Aliquam at massa ipsum. Quisque bibendum purus convallis nulla ultrices ultricies. Nullam aliquam, mi eu aliquam tincidunt, purus velit laoreet tortor, viverra pretium nisi quam vitae mi. Fusce vel volutpat elit. Nam sagittis nisi dui.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function playVideo() {
+            alert('Video playback would start here.');
+        }
+
+        function isElementInViewport(el) {
+            var rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        function handleScroll() {
+            var cards = document.querySelectorAll('.card');
+            cards.forEach(function(card) {
+                if (isElementInViewport(card)) {
+                    card.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('load', handleScroll);
+    </script>
+</body>
+</html>
